@@ -29,20 +29,20 @@
         <TextView
                 android:id="@+id/smallheadertext"
                 android:text="@string/HomeHeaderMedium"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textColor="#000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginRight="8dp" android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/headertext" app:layout_constraintHorizontal_bias="0.159"
+                app:layout_constraintTop_toBottomOf="@+id/headertext" app:layout_constraintHorizontal_bias="0.157"
                 android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/smallheadertextbottom"
                 app:layout_constraintVertical_bias="0.0"/>
         <TextView
                 android:id="@+id/smallheadertextbottom"
                 android:text="@string/HomeHeaderSmall"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textColor="#000"
                 android:layout_width="wrap_content"
                 android:layout_height="27dp"
@@ -53,286 +53,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginLeft="8dp"
                 app:layout_constraintTop_toBottomOf="@id/smallheadertext"
-                app:layout_constraintHorizontal_bias="0.295"/>
+                app:layout_constraintHorizontal_bias="0.174"/>
 
+        <!-- TODO: Update blank fragment layout -->
 
-        <GridLayout android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0"
-                    android:alignmentMode="alignMargins"
-                    android:columnCount="2"
-                    android:columnOrderPreserved="false"
-                    android:padding="14dp"
-                    android:rowCount="3"
-                    app:layout_constraintTop_toBottomOf="@id/smallheadertextbottom">
-
-            <android.support.v7.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_rowWeight="1"
-                    android:background="@color/cardBackgroud"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
-                    android:id="@+id/cardview-item1">
-
-                <LinearLayout
-                        android:layout_width="142dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="10">
-
-
-                    <ImageView
-                            android:id="@+id/icon1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="55dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="8"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:elegantTextHeight="true"
-                            android:singleLine="true"
-                            android:text="@string/Purchase"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:paddingTop="15dp"
-                            android:lines="2"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_rowWeight="1"
-                    android:background="@color/cardBackgroud"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
-                    android:id="@+id/cardview-item2">
-
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="10">
-
-
-                    <ImageView
-                            android:id="@+id/icon2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="55dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="8"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:elegantTextHeight="true"
-                            android:singleLine="true"
-                            android:text="@string/Transfer"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:paddingTop="15dp"
-                            android:lines="2"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-            <android.support.v7.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_rowWeight="1"
-                    android:background="@color/cardBackgroud"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
-                    android:id="@+id/cardview-item3">
-
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="10">
-
-
-                    <ImageView
-                            android:id="@+id/icon3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="55dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="8"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:elegantTextHeight="true"
-                            android:singleLine="true"
-                            android:text="@string/Withdrawal"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:paddingTop="15dp"
-                            android:lines="2"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_rowWeight="1"
-                    android:background="@color/cardBackgroud"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
-                    android:id="@+id/cardview-item4">
-
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="10">
-
-
-                    <ImageView
-                            android:id="@+id/icon4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="55dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="8"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:elegantTextHeight="true"
-                            android:singleLine="true"
-                            android:text="@string/Bills"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:paddingTop="15dp"
-                            android:lines="2"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_rowWeight="1"
-                    android:background="@color/cardBackgroud"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
-                    android:id="@+id/cardview-item5">
-
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="10">
-
-
-                    <ImageView
-                            android:id="@+id/icon5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="55dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="8"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:elegantTextHeight="true"
-                            android:singleLine="true"
-                            android:text="ITEM1"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:paddingTop="15dp"
-                            android:lines="2"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-            <android.support.v7.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_columnWeight="1"
-                    android:layout_marginBottom="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_rowWeight="1"
-                    android:background="@color/cardBackgroud"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
-                    android:id="@+id/cardview-item6">
-
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="10dp"
-                        android:orientation="vertical"
-                        android:weightSum="10">
-
-
-                    <ImageView
-                            android:id="@+id/icon6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="55dp"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_weight="8"/>
-
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-                            android:elegantTextHeight="true"
-                            android:singleLine="true"
-                            android:text="ITEM2"
-                            android:textAlignment="center"
-                            android:textStyle="bold"
-                            android:paddingTop="15dp"
-                            android:lines="2"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-
-        </GridLayout>
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/card-container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/smallheadertextbottom"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </android.support.constraint.ConstraintLayout>
-
-    <!--<android.support.constraint.ConstraintLayout -->
-            <!--android:layout_width="match_parent"-->
-                  <!---->
-            <!--android:layout_height="wrap_content"-->
-                  <!---->
-            <!--android:orientation="vertical">-->
-
-        <!---->
-    <!--</android.support.constraint.ConstraintLayout>-->
 
 </FrameLayout>

@@ -16,6 +16,12 @@
     <string name="Transfer">Transfer</string>
     <string name="Bills">Bills</string>
     <string name="Purchase">Purchase</string>
+    <string name="Entertainment">Entertainment</string>
+    <string name="Transport">Transport</string>
+
+    <!-- SubCategory -->
+    <string name="Food">Food</string>
+    <string name="Clothing">Clothing</string>
 
 
 </resources>
