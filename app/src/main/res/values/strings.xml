@@ -6,4 +6,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="HomeHeader">Classify Transaction</string>
+    <string name="HomeHeaderMedium">Classify this transaction</string>
+    <string name="HomeHeaderSmall">into a particular category</string>
+    <!-- Transaction Categories -->
+
+    <string name="Withdrawal">Withdrawal</string>
+    <string name="Transfer">Transfer</string>
+    <string name="Bills">Bills</string>
+    <string name="Purchase">Purchase</string>
+
+
 </resources>
