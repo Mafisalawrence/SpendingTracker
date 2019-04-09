@@ -11,18 +11,11 @@ open class CategoryObject : RealmObject()
      @Required
      @PrimaryKey
      var id: Long = 0
-         get() = field
-         set(value) { field = value }
-
 
     @Required
-    var name: String = ""
-        get() = field
-        set(value) { field = value }
+     var name: String = ""
 
-    // val subCategory: RealmList<SubCategoryObject>? = null
-
-
-
+    @Required
+    var subCategory: RealmList<SubCategoryObject>? = null
 }
 
