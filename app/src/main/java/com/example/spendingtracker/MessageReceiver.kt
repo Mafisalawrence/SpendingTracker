@@ -9,11 +9,12 @@ import android.widget.Toast
 class MessageReceiver : BroadcastReceiver() {
 
     override fun onReceive(context: Context, intent: Intent) {
-        Toast.makeText(context, intent.action, Toast.LENGTH_LONG)
+        Toast.makeText(context, intent.action, Toast.LENGTH_LONG).show()
+        val alert = AlertDialog.Builder(context)
+        alert.setMessage("Sms receiver is working").create().show()
 
-        if (intent.getAction().equals("android.provider.Telephony.SMS_RECEIVED")) {
-            val alert = AlertDialog.Builder(context)
-            alert.setMessage("Sms receiver is working").create().show()
-        }
+//        if (intent.getAction().equals("android.provider.Telephony.SMS_RECEIVED")) {
+//
+//        }
     }
 }

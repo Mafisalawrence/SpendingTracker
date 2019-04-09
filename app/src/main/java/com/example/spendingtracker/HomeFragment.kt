@@ -10,6 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.spendingtracker.RealmObjects.CategoryObject
+import io.realm.Realm
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -33,16 +35,19 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val titles = arrayOf("Purchase","Withdrawal","Transfer","Bills","Transport","Entertainment")
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val recyclerView =  view.findViewById<RecyclerView>(R.id.card_container)
+
+        val realmInstance = Realm.getDefaultInstance()
+
+        val obj =  realmInstance.where(CategoryObject().javaClass).findAll()
+
         recyclerView.layoutManager =  GridLayoutManager(context, 2)
 
-        recyclerView.adapter = CardContainerRecyclerAdapter(context,titles)
-        // Inflate the layout for this fragment
+        recyclerView.adapter = CardContainerRecyclerAdapter(context,obj)
+
         return view
     }
-
 
 }

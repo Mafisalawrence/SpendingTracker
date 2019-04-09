@@ -7,9 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.spendingtracker.RealmObjects.CategoryObject
+import io.realm.RealmResults
 import kotlinx.android.synthetic.main.card_layout.view.*
 
-class CardContainerRecyclerAdapter(val context: Context?, val titles: Array<String>) : RecyclerView.Adapter<CardContainerRecyclerAdapter.ViewHolder>()
+class CardContainerRecyclerAdapter(val context: Context?, val titles: RealmResults<CategoryObject>) : RecyclerView.Adapter<CardContainerRecyclerAdapter.ViewHolder>()
 {
     override fun getItemCount(): Int {
         return titles.size
@@ -20,20 +22,15 @@ class CardContainerRecyclerAdapter(val context: Context?, val titles: Array<Stri
     }
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
+        p0.itemView.card_text.text = titles.get(p1)?.name
 
-        p0.itemView.card_text.text = titles.get(p1)
         p0.itemView.setOnClickListener {
-            Toast.makeText(context , titles.get(p1) ,Toast.LENGTH_SHORT).show()
+            Toast.makeText(context , titles.get(p1)?.name ,Toast.LENGTH_SHORT).show()
         }
-
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     {
-//        init {
-//            itemView.setOnClickListener {
-//                Toast.makeText(itemView.context, , Toast.LENGTH_LONG).show()
-//            }
-//        }
+
     }
 }

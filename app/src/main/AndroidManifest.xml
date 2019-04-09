@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.spendingtracker">
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
 
     <application
             android:allowBackup="true"
@@ -21,7 +23,9 @@
                 android:name=".MessageReceiver"
                 android:enabled="true"
                 android:exported="true"
-                android:priority="1000">
+                android:priority="1000"
+                android:permission="android.permission.BROADCAST_SMS">
+
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
