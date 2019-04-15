@@ -3,22 +3,18 @@ package com.example.spendingtracker.RealmObjects
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
 import io.realm.annotations.Required
+import java.text.DecimalFormat
+import java.util.*
 
-open class TransactionObject:RealmObject()
+open class TransactionObject :RealmObject()
 {
     @PrimaryKey
-    @Required
-    val id = 0
+    var id : String = ""
 
     @Required
-    val trasactionName : String = ""
+    var transactionDate : String = ""
 
-    @Required
-    val transactionAmount  = 0
+    var transactionAmount :Float = 0.0F
 
-    @Required
-    val trasactionDate = ""
-
-    @Required
-    val category: CategoryObject =  CategoryObject()
+    var category: CategoryObject? =  CategoryObject()
 }

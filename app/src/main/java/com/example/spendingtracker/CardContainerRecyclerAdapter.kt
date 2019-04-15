@@ -22,10 +22,10 @@ class CardContainerRecyclerAdapter(val context: Context?, val titles: RealmResul
     }
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        p0.itemView.card_text.text = titles.get(p1)?.name
+        p0.itemView.card_text.text = titles.get(p1)?.categoryName
 
         p0.itemView.setOnClickListener {
-            Toast.makeText(context , titles.get(p1)?.name ,Toast.LENGTH_SHORT).show()
+            Toast.makeText(context , titles.get(p1)?.categoryName ,Toast.LENGTH_SHORT).show()
         }
     }
 

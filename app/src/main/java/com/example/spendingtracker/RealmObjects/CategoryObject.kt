@@ -8,14 +8,12 @@ import io.realm.annotations.Required
 
 open class CategoryObject : RealmObject()
 {
-     @Required
      @PrimaryKey
-     var id: Long = 0
+     var id: String = ""
 
     @Required
-     var name: String = ""
+     var categoryName: String = ""
 
-    @Required
     var subCategory: RealmList<SubCategoryObject>? = null
 }
 
