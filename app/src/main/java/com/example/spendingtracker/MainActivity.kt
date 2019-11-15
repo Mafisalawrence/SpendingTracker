@@ -2,9 +2,9 @@ package com.example.spendingtracker
 
 import android.app.Notification
 import android.os.Bundle
-import android.support.design.widget.BottomNavigationView
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
         false
     }
-    private fun loadFragment(fragment:Fragment){
+    private fun loadFragment(fragment: Fragment){
             supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.fragment_container, fragment)
